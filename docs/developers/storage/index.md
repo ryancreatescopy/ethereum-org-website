@@ -31,11 +31,11 @@ base:
   - title: <- Back
     content: Ethereum and APIs
     link:
-      to: /developers/apis
+      to: /developers/apis/
   - title: Next ->
     content: Security
     link:
-      to: /developers/security
+      to: /developers/security/
 ---
 
 # Ethereum storage {#ethereum-storage}

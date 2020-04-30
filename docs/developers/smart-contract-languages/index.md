@@ -34,11 +34,11 @@ base:
   - title: <- Back
     content: Security
     link:
-      to: /developers/security
+      to: /developers/security/
   - title: Next ->
     content: Standards
     link:
-      to: /developers/standards
+      to: /developers/standards/
 languages:
   - header: https://asdgvdoyen.cloudimg.io/width/2560/webp/https://api.kauri.io:443/ipfs/QmPyoXQaK9uA1oedsptssr1EhYRBF1A9vrnypbKAkMhuxQ
     hero: true
@@ -47,7 +47,7 @@ languages:
     content: content
     link:
       text: Java docs
-      to: /java
+      to: /java/
   - header: https://i.imgur.com/MFg8Nop.png
     hero: true
     level: 2
@@ -55,7 +55,7 @@ languages:
     content: content
     link:
       text: Golang docs
-      to: /golang
+      to: /golang/
   - header: https://source.unsplash.com/featured?waving
     hero: true
     level: 2
@@ -63,7 +63,7 @@ languages:
     content: content
     link:
       text: Delphi docs
-      to: /delphi
+      to: /delphi/
   - header: https://i.imgur.com/VhoX4LM.png
     hero: true
     level: 2
@@ -71,7 +71,7 @@ languages:
     content: content
     link:
       text: Python docs
-      to: /python
+      to: /python/
   - header: https://source.unsplash.com/featured?waving
     hero: true
     level: 2
@@ -79,7 +79,7 @@ languages:
     content: content
     link:
       text: JavaScript docs
-      to: /javascript
+      to: /javascript/
   - header: https://source.unsplash.com/featured?waving
     hero: true
     level: 2
@@ -87,7 +87,7 @@ languages:
     content: content
     link:
       text: Rust docs
-      to: /rust
+      to: /rust/
   - header: https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png
     hero: true
     level: 2
@@ -95,8 +95,32 @@ languages:
     content: content
     link:
       text: .NET docs
-      to: /dot-net
----include best practice content
+      to: /dot-net/
+dappSys:
+  - title: DappSys
+    link: https://dapp.tools/dappsys/
+  - title: GitHub
+    link: https://github.com/dapphub/dappsys
+openZeppelin:
+  - title: OpenZeppelin
+    link: https://openzeppelin.com/contracts/
+  - title: GitHub
+    link: https://github.com/OpenZeppelin/openzeppelin-contracts
+  - title: Community forum
+    link: https://forum.openzeppelin.com/c/contracts
+aragonOs:
+  - title: Aragon
+    link: https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality
+  - title: Documentation
+    link: https://wiki.aragon.org/
+scwr:
+  - title: Smart Contract Weakness Registry
+    link: https://smartcontractsecurity.github.io/SWC-registry/
+  - title: GitHub
+    link: https://github.com/SmartContractSecurity/SWC-registry
+---
+
+include best practice content
 
 # Smart contracts {#smart-contracts}
 
@@ -115,6 +139,33 @@ The most popular language on Ethereum, inspired by C++, Python and JavaScript.
 Based on python
 
 <list-card :items="$page.frontmatter.vyper" level="5"/>
+
+## Best practices {#best-practices}
+
+### Make it modular
+
+**DappSys**  
+Safe, simple, flexible building-blocks for smart-contracts.
+
+<list-card :items="$page.frontmatter.dappSys" level="5"/>
+
+### Make it secure
+
+**OpenZeppelin contracts**  
+Library for secure smart contract development.
+
+<list-card :items="$page.frontmatter.openZeppelin" level="5"/>
+
+**Smart contract weakness registry**
+
+<list-card :items="$page.frontmatter.scwr" level="5"/>
+
+### Make it future-proof
+
+**aragonOS**  
+Patterns for upgradeability and permission control
+
+<list-card :items="$page.frontmatter.aragonOs" level="5"/>
 
 ## Get started {#get-started}
 

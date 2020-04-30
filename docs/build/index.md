@@ -19,7 +19,7 @@ base:
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
       text: Read the docs
-      to: /build/apis
+      to: /build/apis/
       button: true
   - header: https://source.unsplash.com/featured?waving
     hero: true
@@ -28,7 +28,7 @@ base:
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
       text: Read the docs
-      to: /build/block-explorers
+      to: /build/block-explorers/
       button: true
   - header: https://source.unsplash.com/featured?waving
     hero: true
@@ -37,7 +37,7 @@ base:
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
       text: Read the docs
-      to: /build/clients-and-nodes
+      to: /build/clients-and-nodes/
       button: true
   - header: https://source.unsplash.com/featured?waving
     hero: true
@@ -46,7 +46,7 @@ base:
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
       text: Read the docs
-      to: /build/design-and-ux
+      to: /build/design-and-ux/
       button: true
   - header: https://source.unsplash.com/featured?waving
     hero: true
@@ -55,57 +55,57 @@ base:
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
       text: Read the docs
-      to: /build/developer-tools
+      to: /build/developer-tools/
       button: true
 base2:
   - title: APIs
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/apis
+      to: /build/apis/
   - title: Block explorers
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/block-explorers
+      to: /build/block-explorers/
   - title: Clients and nodes
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/clients-and-nodes
+      to: /build/clients-and-nodes/
   - title: Design and UX
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/design-and-ux
+      to: /build/design-and-ux/
   - title: Developer tools
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/developer-tools
+      to: /build/developer-tools/
   - title: Integrated development environments
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/integrated-development-environments
+      to: /build/integrated-development-environments/
   - title: Security
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/security
+      to: /build/security/
   - title: Smart contract languages
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/smart-contract-languages
+      to: /build/smart-contract-languages/
   - title: Standards
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/standards
+      to: /build/standards/
   - title: Storage
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/storage
+      to: /build/storage/
   - title: Testing
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/testing
+      to: /build/testing/
   - title: Testnets and faucets
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
-      to: /build/testnets-and-faucets
+      to: /build/testnets-and-faucets/
 base3:
   - header: https://source.unsplash.com/featured?waving
     hero: true
@@ -114,7 +114,7 @@ base3:
     content: Our docs will walk you through the various stages of setting working on your Ethereum application. They cover developer tools , programming languages , security tools  and more
     link:
       text: Read the docs
-      to: /developers
+      to: /developers/
       button: true
 ---
 
