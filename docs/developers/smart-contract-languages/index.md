@@ -126,6 +126,10 @@ include best practice content
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are Solidity and Vyper, though there are others under development.
 
+### What is a smart contract?
+
+Explainer
+
 ## Languages {#languages}
 
 ### Solidity
