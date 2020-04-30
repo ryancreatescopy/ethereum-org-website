@@ -36,11 +36,11 @@ base:
   - title: <- Back
     content: Developer tools
     link:
-      to: '/developers/developer-tools'
+      to: /developers/developer-tools
   - title: Next ->
     content: Storage
     link:
-      to: '/developers/storage'
+      to: /developers/storage
 ---
 
 # Ethereum and APIs {#ethereum-and-apis}
