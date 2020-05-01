@@ -29,13 +29,13 @@ orbitDB:
     link: 'https://github.com/orbitdb/orbit-db'
 base:
   - title: <- Back
-    content: Ethereum and APIs
+    content: Standards
     link:
-      to: /developers/apis/
+      to: /developers/standards/
   - title: Next ->
-    content: Security
+    content: Testing
     link:
-      to: /developers/security/
+      to: /developers/testing/
 ---
 
 # Ethereum storage {#ethereum-storage}

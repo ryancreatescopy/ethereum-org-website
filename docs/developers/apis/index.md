@@ -33,10 +33,6 @@ infura:
   - title: GitHub
     link: 'https://github.com/INFURA'
 base:
-  - title: <- Back
-    content: Developer tools
-    link:
-      to: /developers/developer-tools/
   - title: Next ->
     content: Storage
     link:
