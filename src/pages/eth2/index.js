@@ -6,6 +6,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
+import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
@@ -28,7 +29,7 @@ import { translateMessageId } from "../../utils/translations"
 const Row = styled.div`
   display: flex;
   align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
 `
@@ -37,7 +38,7 @@ const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${props => props.theme.breakpoints.s}) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -59,7 +60,7 @@ const CentreCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;
   text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
 `
@@ -72,17 +73,17 @@ const StyledCardContainer = styled(CardContainer)`
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
   min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  box-shadow: ${props => props.theme.colors.tableBoxShadow};
   margin: 1rem;
   padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
 
   &:hover {
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    background: ${props => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -93,14 +94,14 @@ const Disclaimer = styled.div`
   display: flex;
   text-align: center;
   justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     margin: 0rem 2rem;
   }
 `
 
 const StyledInfoBanner = styled(InfoBanner)`
   margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     margin: 2rem 0;
   }
 `
@@ -111,14 +112,14 @@ const Vision = styled.div`
 
 const ContributeCard = styled.div`
   border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border: 1px solid ${props => props.theme.colors.border};
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0rem 3rem;
   margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     margin-left: 0rem;
     margin-right: 0rem;
     flex-direction: column;
@@ -132,7 +133,7 @@ const StyledCallout = styled(CalloutBanner)`
 `
 
 const ContributeButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     width: 100%;
     margin-top: 1.5rem;
   }
@@ -140,19 +141,19 @@ const ContributeButton = styled(ButtonLink)`
 
 const Staking = styled.div`
   padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
+  background: ${props => props.theme.colors.cardGradient};
   width: 100%;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding: 2rem;
   }
 `
 
 const StakingColumns = styled.div`
   display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
 `
@@ -169,7 +170,7 @@ const StakingRightColumn = styled.div`
   align-items: center;
   margin: 0rem 2rem;
   margin-left: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     align-items: flex-start;
     flex-direction: column-reverse;
     margin: 0rem;
@@ -196,14 +197,14 @@ const RightColumn = styled.div`
   width: 100%;
   margin-left: 2rem;
   flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     margin-left: 0rem;
     flex-direction: column;
   }
 `
 
 const FullWidthContainer = styled(Page)`
-  background: ${(props) => props.theme.colors.ednBackground};
+  background: ${props => props.theme.colors.ednBackground};
   padding: 2rem;
   overflow-x: scroll;
   margin-bottom: 2rem;
@@ -212,7 +213,7 @@ const FullWidthContainer = styled(Page)`
 const Faq = styled.div`
   display: flex;
   margin-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -240,33 +241,6 @@ const paths = [
   },
 ]
 
-const upgrades = [
-  {
-    emoji: ":police_car_light:",
-    title: <Translation id="page-eth2-beacon-chain-title" />,
-    description: <Translation id="page-eth2-beacon-chain-desc" />,
-    url: "/eth2/beacon-chain/",
-    button: <Translation id="page-eth2-beacon-chain-btn" />,
-    date: <Translation id="page-eth2-beacon-chain-estimate" />,
-  },
-  {
-    emoji: ":chains:",
-    title: <Translation id="page-eth2-shard-title" />,
-    description: <Translation id="page-eth2-shard-desc" />,
-    url: "/eth2/shard-chains/",
-    button: <Translation id="page-eth2-shard-button" />,
-    date: <Translation id="page-eth2-shard-estimate" />,
-  },
-  {
-    emoji: ":ship:",
-    title: <Translation id="page-eth2-docking" />,
-    description: <Translation id="page-eth2-docking-desc" />,
-    url: "/eth2/docking/",
-    button: <Translation id="page-eth2-docking-btn" />,
-    date: <Translation id="page-eth2-docking-estimate" />,
-  },
-]
-
 const Eth2IndexPage = ({ data }) => {
   const intl = useIntl()
 
@@ -274,7 +248,7 @@ const Eth2IndexPage = ({ data }) => {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-    image: data.doge.childImageSharp.fluid,
+    image: data.docking.childImageSharp.fluid,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -288,6 +262,30 @@ const Eth2IndexPage = ({ data }) => {
       },
     ],
   }
+
+  const upgrades = [
+    {
+      image: data.beaconchain.childImageSharp.fixed,
+      title: <Translation id="page-eth2-beacon-chain-title" />,
+      description: <Translation id="page-eth2-beacon-chain-desc" />,
+      to: "/eth2/beacon-chain/",
+      date: <Translation id="page-eth2-beacon-chain-estimate" />,
+    },
+    {
+      image: data.shards.childImageSharp.fixed,
+      title: <Translation id="page-eth2-shard-title" />,
+      description: <Translation id="page-eth2-shard-desc" />,
+      to: "/eth2/shard-chains/",
+      date: <Translation id="page-eth2-shard-estimate" />,
+    },
+    {
+      image: data.thedocking.childImageSharp.fixed,
+      title: <Translation id="page-eth2-docking" />,
+      description: <Translation id="page-eth2-docking-desc" />,
+      to: "/eth2/docking/",
+      date: <Translation id="page-eth2-docking-estimate" />,
+    },
+  ]
 
   return (
     <Page>
@@ -338,7 +336,7 @@ const Eth2IndexPage = ({ data }) => {
         </Vision>
       </Content>
       <StyledCallout
-        image={data.eth.childImageSharp.fluid}
+        image={data.oldship.childImageSharp.fluid}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         title={translateMessageId("page-eth2-dive", intl)}
         description={translateMessageId("page-eth2-dive-desc", intl)}
@@ -359,15 +357,15 @@ const Eth2IndexPage = ({ data }) => {
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
             return (
-              <StyledCard
+              <ActionCard
                 key={idx}
-                emoji={upgrade.emoji}
+                image={upgrade.image}
                 title={upgrade.title}
                 description={upgrade.description}
+                to={upgrade.to}
               >
                 <h6>{upgrade.date}</h6>
-                <ButtonLink to={upgrade.url}>{upgrade.button}</ButtonLink>
-              </StyledCard>
+              </ActionCard>
             )
           })}
         </StyledCardContainer>
@@ -811,7 +809,7 @@ export default Eth2IndexPage
 
 export const query = graphql`
   query {
-    eth: file(relativePath: { eq: "eth2/eth2_eth.png" }) {
+    oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
@@ -825,16 +823,30 @@ export const query = graphql`
         }
       }
     }
-    doge: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
+    docking: file(relativePath: { eq: "eth2/docking.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    ethresearch: file(relativePath: { eq: "eth2/ethresearch.png" }) {
+    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        fixed(width: 300) {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
           ...GatsbyImageSharpFixed
         }
       }

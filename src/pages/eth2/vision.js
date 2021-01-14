@@ -7,6 +7,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
+import ActionCard from "../../components/ActionCard"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
@@ -28,7 +29,7 @@ const HeroContainer = styled.div`
   padding-right: 2rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-top: 6rem;
     padding-left: 2rem;
     padding-bottom: 4rem;
@@ -41,7 +42,7 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex-direction: column;
     margin-right: -2rem;
     margin-left: -2rem;
@@ -58,7 +59,7 @@ const Hero = styled(Img)`
   margin-right: 3rem;
   align-self: center;
   width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
     margin-top: 0;
     margin-right: 0;
   }
@@ -67,16 +68,16 @@ const Hero = styled(Img)`
 const Title = styled.h1`
   text-transform: uppercase;
   font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
+  color: ${props => props.theme.colors.text300};
 `
 
 const Subtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
+  color: ${props => props.theme.colors.text200};
   max-width: 480px;
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     font-size: 20px;
   }
 `
@@ -107,7 +108,7 @@ const CentreCard = styled(Card)`
   padding: 1.5rem;
   border: 0px;
   text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
 `
@@ -117,7 +118,7 @@ const StyledCard = styled(Card)`
   min-width: 240px;
   margin: 1rem;
   padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
 `
@@ -125,7 +126,7 @@ const StyledCard = styled(Card)`
 const CentralContent = styled.div`
   margin: 0rem 12rem;
   justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     margin: 0rem 0rem;
   }
 `
@@ -133,7 +134,7 @@ const CentralContent = styled.div`
 const TrilemmaContent = styled.div`
   width: 100%;
   margin: 2rem 0;
-  background: ${(props) => props.theme.colors.cardGradient};
+  background: ${props => props.theme.colors.cardGradient};
   padding: 2rem;
 `
 
@@ -159,33 +160,6 @@ const paths = [
   },
 ]
 
-const upgrades = [
-  {
-    emoji: ":police_car_light:",
-    title: <Translation id="page-eth2-vision-beacon-chain" />,
-    description: <Translation id="page-eth2-vision-beacon-chain-desc" />,
-    url: "/eth2/beacon-chain/",
-    button: <Translation id="page-eth2-vision-beacon-chain-btn" />,
-    date: <Translation id="page-eth2-vision-beacon-chain-date" />,
-  },
-  {
-    emoji: ":chains:",
-    title: <Translation id="page-eth2-shard-title" />,
-    description: <Translation id="page-eth2-vision-shard-desc-4" />,
-    url: "/eth2/shard-chains/",
-    button: <Translation id="page-eth2-shard-button" />,
-    date: <Translation id="page-eth2-vision-shard-date" />,
-  },
-  {
-    emoji: ":ship:",
-    title: <Translation id="page-eth2-docking" />,
-    description: <Translation id="page-eth2-vision-docking-desc" />,
-    url: "/eth2/docking/",
-    button: <Translation id="page-eth2-docking-btn" />,
-    date: <Translation id="page-eth2-vision-docking-date" />,
-  },
-]
-
 const VisionPage = ({ data, location }) => {
   const intl = useIntl()
 
@@ -193,9 +167,33 @@ const VisionPage = ({ data, location }) => {
     title: translateMessageId("page-eth2-vision-title", intl),
     header: translateMessageId("page-eth2-vision-future", intl),
     subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
-    image: data.eth.childImageSharp.fluid,
+    image: data.oldship.childImageSharp.fluid,
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
+
+  const upgrades = [
+    {
+      image: data.beaconchain.childImageSharp.fixed,
+      title: <Translation id="page-eth2-beacon-chain-title" />,
+      description: <Translation id="page-eth2-beacon-chain-desc" />,
+      to: "/eth2/beacon-chain/",
+      date: <Translation id="page-eth2-beacon-chain-estimate" />,
+    },
+    {
+      image: data.shards.childImageSharp.fixed,
+      title: <Translation id="page-eth2-shard-title" />,
+      description: <Translation id="page-eth2-shard-desc" />,
+      to: "/eth2/shard-chains/",
+      date: <Translation id="page-eth2-shard-estimate" />,
+    },
+    {
+      image: data.thedocking.childImageSharp.fixed,
+      title: <Translation id="page-eth2-docking" />,
+      description: <Translation id="page-eth2-docking-desc" />,
+      to: "/eth2/docking/",
+      date: <Translation id="page-eth2-docking-estimate" />,
+    },
+  ]
 
   return (
     <Page>
@@ -367,15 +365,15 @@ const VisionPage = ({ data, location }) => {
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
             return (
-              <StyledCard
+              <ActionCard
                 key={idx}
-                emoji={upgrade.emoji}
+                image={upgrade.image}
                 title={upgrade.title}
                 description={upgrade.description}
+                to={upgrade.to}
               >
                 <h6>{upgrade.date}</h6>
-                <ButtonLink to={upgrade.url}>{upgrade.button}</ButtonLink>
-              </StyledCard>
+              </ActionCard>
             )
           })}
         </StyledCardContainer>
@@ -388,7 +386,7 @@ export default VisionPage
 
 export const query = graphql`
   query {
-    eth: file(relativePath: { eq: "eth2/eth2_eth.png" }) {
+    oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
